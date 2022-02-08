@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap');
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*PreLoader*/
+#loading{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff url('./Loader.gif') no-repeat center;
+     z-index: 99999999;
+}
+body{
+    height: 110vh;
+    background-color: #000000;
+    background: radial-gradient(circle, #2d3436 0%, #000000 54%) no-repeat;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    
+}
+
+
+/*NavBar*/
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 2rem 4rem;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+}
+.navlist1, .navlist2{
+    display: flex;
+    list-style: none;
+}
+.navlistitem a{
+    text-decoration: none;
+    padding: 0.5rem;
+    color: black;
+    border: 1px solid white;
+    transition: 0.5s ease-in-out;
+}
+
+.navlistitem a:hover{
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+#toggle{
+    display: block;
+    position: relative;
+    height: 15px;
+    width: 50px;
+    background-color: 	#585858;
+    border-radius: 16px;
+    margin-left: 10px;
+    transition: 0.5s ease-in-out;
+}
+#toggle .tooltip{
+    display: none;
+    background-color: black;
+    color: white;
+    position: relative;
+    top: 2.5rem;
+    width: 12.5rem;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+}
+#toggle:hover .tooltip{
+    display: block;
+}
+
+.indicator{
+    position: absolute;
+    top: -5px;
+    left: 25px;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: 0.5s ease-in-out;
+    border-radius: 50%;
+}
+
+nav .icon{
+    display: none;
+}
+
+/*Home Section*/
+.home{
+    margin-top: 11rem;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+}
+.home h1, .home h5{
+    font-size: 2.5rem;
+    position: relative;
+    animation-name: name;
+    animation-duration: 4s;
+    animation-delay: -2s;
+}
+.home h5{
+    animation-name: para;
+    font-size: 1.5rem;
+    margin-top: 0.9rem;
+}
+.scroll{
+    position: relative;
+    animation: arrow 1.3s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 17rem;
+}
+.scroll img{
+    width: 1.3rem;
+}
+.scroll a{
+    text-decoration: none;
+    color: white;
+}
+/*Expertise*/
+
+.expertise{
+    position: relative; 
+    margin-top: 10.5rem;
+    padding-top: 8rem;
+    height: 100vh;
+    color: #000000;
+}
+.expertise h1{
+   font-size: 2rem;
+  position: relative;
+  left: 68%;
+  top: -4%;
+   letter-spacing: 0.1rem;
+}
+.expertise .skills{ 
+    display: flex;
+    justify-content: center;
+    line-height: 2rem;
+}
+
+.expertise .skills-2{
+    position: relative;
+    left: 16.5%;
+    top: 1.5rem;
+    font-size: 1.2rem;
+}
+.expertise .skills-1{
+    position: relative;
+    right: 5%;
+    top: 1.2rem;
+    font-size: 1.2rem;
+}
+.expertise .skills hr{
+    width: 25%;
+    border: 0.5px solid #000000;
+    margin-bottom: 1rem;
+}
+.expertise .skills h2{
+    margin-top: 2rem;
+}
+.expertise .skills li{
+    margin: 0.5rem 0;
+}
+.activities{
+    position: relative;
+    height: 130vh;
+    background-color: #000000;
+    background: radial-gradient(circle, #2d3436 0%, #000000 54%) no-repeat;
+}
+
+.card{
+    position: relative;
+    background-color: white;
+    color: #000000;
+    width: 17%;
+    border-radius: 1rem;
+    height: 33%;
+    text-align: center;
+    padding: 1rem 0;
+}
+#card1{   
+    left: 70%;
+    top: 17%;
+    background: url(./qwiklabimage.png) no-repeat;
+    background-size: 260px 310px;
+}
+#card1 p{
+    margin: 1.5rem 0.5rem 1.7rem 0.5rem;
+}
+#card1 a{
+    text-decoration: none;
+}
+#card2{
+    left: 49%;
+    top: 8%;
+    background: url(./AWS-logo-2.jpg) no-repeat;
+    background-size: 260px 310px;
+}
+#card2 p{
+    margin: 1rem 0.5rem 1rem 0.5rem;
+}
+#card3{
+    left: 70%;
+    top: -8%;
+    background: url(./sevenimages.jpg) no-repeat;
+    background-size: 260px 310px;
+}
+#card3 h1{
+    margin-left: 6rem;
+}
+#card3 ul{
+    margin-left: 9rem;
+    margin-top: 3rem;
+    text-align: left;
+}
+#card3 li{
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.footer{
+    position: relative;
+    background-color: white;
+    color: #000000;
+}
+.footer-cards{
+    position: absolute;
+    top: 20rem;
+    left: 65rem;
+    display: flex;
+    flex-direction: column;
+}
+.footer-cards h3{
+ margin-bottom: 1rem;
+}
+.footer-card img{
+    height: 40px;
+    margin: 0 0.8rem;
+}
+.cards-container{
+    display: flex;
+    margin-left: 2.6rem;
+}
+#card-5{
+    border-radius: 100%;
+    animation-name: resume;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.branding{
+    position: absolute;
+    top: 30rem;
+    left: 45%;
+}
+
+
+
+@keyframes name{
+    0% {left: 100%;}
+    25% {left: 60%;}
+    50% {left: 30%;}
+    100%{left: 0%;}
+}
+
+@keyframes para{
+    0% {right: 100%;}
+    25% {right: 60%;}
+    50% {right: 30%;}
+    100%{right: 0%;}
+}
+
+@keyframes arrow{
+    0%{top: 0px;}
+    50%{top:5px;}
+    100%{top: 0px;}
+}
+@keyframes resume {
+    from {transform: rotate(0deg)}
+    to {transform : rotate(360deg)}
+  }
+
+/* Wave */
+
+@media (max-width: 767px) {
+    .wave svg {
+            width: calc(100% + 1.3px);
+            height: 61px;
+        }
+    }
+    
+    
+    .wave{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    
+    .wave svg{
+        position: relative;
+        display: block;
+        width: calc(300% + 1.3px);
+        height: 500px;
+        transform: rotateY(180deg);
+    }
+    
+    .wave #shapefill{
+        fill: #000000;
+    }
+    .wave2{
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    .wave2 svg{
+        position: relative;
+        display: block;
+        width: calc(300% + 1.3px);
+        height: 500px;
+        transform: rotateY(180deg);
+    }
+    .wave2 #shapefill{
+        fill: white;
+    }
+    .wave3{
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    .wave3 svg{
+        position: relative;
+        display: block;
+        width: calc(300% + 1.3px);
+        height: 500px;
+        transform: rotateY(180deg);
+    }
+    .wave3 #shapefill{
+        fill: #000000;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width :500px) {
+    body{
+        background-color: black;
+    }
+   nav{
+       background-color: white;
+       margin: 0.6rem;
+    }
+
+    .navlistitem a{
+        padding: 0;
+        color: black;
+        border: 0px;
+    }
+    nav .icon{
+        display: block;
+        height: 10px;
+        padding: 0 0.5rem;
+    }
+    nav .text{
+        display: none;
+    }
+    #toggle{
+        height: 10px;
+        width: 30px;
+        margin: 5px 8px;
+    }
+    .indicator{
+        height: 20px;
+        width: 20px;
+        border: 1px solid black;
+    }
+    #toggle.active .indicator{
+        left: 15px;
+    }
+    
+}
+
